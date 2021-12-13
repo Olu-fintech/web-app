@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://3.95.5.146:8081/repository/TDprojectrelease/</url>
+	      <url>http://52.54.221.210:8081/repository/ebaypipeline-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://3.95.5.146:8081/repository/TDproject/</url>
+	      <url>http://52.54.221.210:8081/repository/ebay-pipeline/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
