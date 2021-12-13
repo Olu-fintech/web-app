@@ -1,0 +1,35 @@
+node {
+ def MavenHome = tool name: 'Maven3.8.4'
+
+stage('Clone') {
+git credentialsId: 'GITHUB CRED', url: 'https://github.com/Olu-fintech/web-app'
+}
+stage('mavenbuild') {
+ sh "${MavenHome}/bin/mvn clean package"
+}
+stage('Codequality') {
+//sh "${MavenHome}/bin/mvn sonar:sonar"
+}
+stage('Uploadartifacts') {
+//sh "${MavenHome}/bin/mvn deploy"
+}
+stage('DeploytoUAT') {
+//deploy adapters: [tomcat9(credentialsId: 'tomcred4', path: '', url: 'http://34.203.225.115:7000/')], contextPath: null, war: 'target/*war'
+}
+stage('Emailnotification') {
+emailext body: '''Hello everyone,
+
+Builds from ebay\'s pipeline project
+
+Landmark Technologies''', subject: 'Build status', to: 'Developers'
+}
+stage('approval') {
+timeout(time:8,units: 'HOURS') {
+  input message: 'Please verify and approve'
+}
+}
+stage('Prod-Deploy'){
+
+}
+
+}
