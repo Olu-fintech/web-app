@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://52.54.221.210:8081/repository/ebaypipeline-release/</url>
+	      <url>http://18.205.107.157:8081/repository/ebay-blackfriday2release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://52.54.221.210:8081/repository/ebay-pipeline/</url>
+	      <url>http://18.205.107.157:8081/repository/ebayblackfriday-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
