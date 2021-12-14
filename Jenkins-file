@@ -8,10 +8,10 @@ stage('mavenbuild') {
  sh "${MavenHome}/bin/mvn clean package"
 }
 stage('Codequality') {
-//sh "${MavenHome}/bin/mvn sonar:sonar"
+sh "${MavenHome}/bin/mvn sonar:sonar"
 }
 stage('Uploadartifacts') {
-//sh "${MavenHome}/bin/mvn deploy"
+sh "${MavenHome}/bin/mvn deploy"
 }
 stage('DeploytoUAT') {
 //deploy adapters: [tomcat9(credentialsId: 'tomcred4', path: '', url: 'http://34.203.225.115:7000/')], contextPath: null, war: 'target/*war'
